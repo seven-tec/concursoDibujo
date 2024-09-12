@@ -1,0 +1,145 @@
+/* Estilos globales para todas las páginas */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(45deg, #f7e6ff, #a1f3ff);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Encabezados generales */
+h1 {
+    font-size: 48px;
+    color: #ff3e3e;
+    text-shadow: 2px 2px 5px #ff9e9e;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 40px;
+    color: #4682b4;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 24px;
+    color: #333;
+    margin: 5px;
+}
+
+.highlight {
+    color: #ff4500;
+    font-weight: bold;
+}
+
+/* Contenedores de contenido */
+.container {
+    border: 4px dashed #ff4500;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.categories, .rules, .prizes, .dates {
+    background-color: #ffefd5;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Lista de premios */
+.prizes ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.prizes ul li {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+/* Botón CTA (Call to Action) */
+.cta {
+    font-size: 30px;
+    background-color: #32cd32;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 10px;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.cta:hover {
+    background-color: #2eb82e;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Formularios */
+form {
+    display: inline-block;
+    padding: 20px;
+    background-color: #fff;
+    border: 3px solid #4682b4;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #4682b4;
+    border-radius: 5px;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    font-size: 24px;
+    background-color: #32cd32;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #2eb82e;
+}
+
+/* Botón en confirmación */
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
