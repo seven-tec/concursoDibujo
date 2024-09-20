@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleFormulario.css">
 </head>
 <body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="formulario.html">Participa</a></li>
+        </ul>
+    </nav>
 
     <div class="container">
         <h1>Formulario de Registro</h1>
@@ -30,6 +37,18 @@
             <input type="submit" value="Enviar">
         </form>
     </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            var nombre = document.getElementById('nombre').value;
+            var edad = document.getElementById('edad').value;
+
+            if (isNaN(edad) || edad < 7 || edad > 16) {
+                event.preventDefault(); // Evita que el formulario se envíe
+                alert('Por favor, ingresa una edad válida entre 7 y 16 años.');
+            }
+        });
+    </script>
 
 </body>
 </html>

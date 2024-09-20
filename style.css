@@ -1,145 +1,159 @@
-/* Estilos globales para todas las páginas */
-body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    background: linear-gradient(45deg, #f7e6ff, #a1f3ff);
-    text-align: center;
-    padding: 20px;
+/* Colores obtenidos de la paleta */
+:root {
+    --color-primary: #F26D91; /* Rosa */
+    --color-secondary: #8C3B87; /* Púrpura */
+    --color-accent: #0396A6; /* Turquesa */
+    --color-info: #F2A922; /* Amarillo mostaza */
+    --color-success: #BF6517; /* Naranja oscuro */
 }
 
-/* Encabezados generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E0F7FA;
+    color: #333;
+    text-align: center;
+}
+
 h1 {
-    font-size: 48px;
-    color: #ff3e3e;
-    text-shadow: 2px 2px 5px #ff9e9e;
-    margin-bottom: 10px;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 20px;
 }
 
 h2 {
-    font-size: 40px;
-    color: #4682b4;
-    margin-bottom: 5px;
+    color: var(--color-secondary);
 }
 
-p {
-    font-size: 24px;
-    color: #333;
-    margin: 5px;
-}
-
-.highlight {
-    color: #ff4500;
-    font-weight: bold;
-}
-
-/* Contenedores de contenido */
 .container {
-    border: 4px dashed #ff4500;
-    border-radius: 20px;
-    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    margin: 20px auto;
-    max-width: 800px;
 }
 
-.categories, .rules, .prizes, .dates {
-    background-color: #ffefd5;
+.rules {
+    background-color: var(--color-accent);
+    color: white;
+    padding: 15px;
     border-radius: 10px;
-    padding: 20px;
-    margin: 20px 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-/* Lista de premios */
-.prizes ul {
+.prizes, .dates {
+    background-color: var(--color-info);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+ul {
     list-style-type: none;
     padding: 0;
 }
 
-.prizes ul li {
-    font-size: 28px;
-    margin: 10px 0;
+ul li {
+    padding: 5px 0;
 }
 
-/* Botón CTA (Call to Action) */
 .cta {
-    font-size: 30px;
-    background-color: #32cd32;
-    color: #fff;
-    padding: 15px 40px;
-    border-radius: 10px;
     display: inline-block;
+    padding: 15px 25px;
+    background-color: var(--color-secondary);
+    color: white;
     text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
     margin-top: 20px;
-    transition: background-color 0.3s;
 }
 
 .cta:hover {
-    background-color: #2eb82e;
+    background-color: #74266a;
 }
 
-/* Footer */
 footer {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #555;
-}
-
-/* Formularios */
-form {
-    display: inline-block;
-    padding: 20px;
-    background-color: #fff;
-    border: 3px solid #4682b4;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 600px;
-}
-
-.form-group {
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-input[type="text"], input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 2px solid #4682b4;
-    border-radius: 5px;
-    font-size: 18px;
-    box-sizing: border-box;
-}
-
-input[type="submit"] {
-    font-size: 24px;
-    background-color: #32cd32;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-input[type="submit"]:hover {
-    background-color: #2eb82e;
-}
-
-/* Botón en confirmación */
-button {
-    font-size: 20px;
-    padding: 10px 20px;
-    margin-top: 20px;
-    cursor: pointer;
-    background-color: #4CAF50;
+    background-color: var(--color-success);
     color: white;
-    border: none;
-    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
 
-button:hover {
-    background-color: #45a049;
+.highlight {
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+
+/* Ajustes para los márgenes laterales y contenido adicional */
+body::before,
+body::after {
+    content: "";
+    display: block;
+    background: linear-gradient(var(--color-primary), var(--color-secondary));
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100px;
+    z-index: -1;
+}
+
+body::after {
+    left: unset;
+    right: -100px;
+}
+
+@media (min-width: 768px) {
+    body::before,
+    body::after {
+        width: 200px;
+    }
+}
+
+.container:before,
+.container:after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: var(--color-success);
+    z-index: -1;
+}
+
+.container:before {
+    left: -100px;
+}
+
+.container:after {
+    right: -100px;
+}
+
+/* Ajustes de diseño para una mejor distribución */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.rules, .prizes, .dates {
+    width: 100%;
+    max-width: 900px;
+}
+
+.cta {
+    margin-bottom: 30px;
+}
+
+/* Opcional: decoración para los bordes laterales */
+body {
+    position: relative;
+    padding-left: 100px;
+    padding-right: 100px;
 }
